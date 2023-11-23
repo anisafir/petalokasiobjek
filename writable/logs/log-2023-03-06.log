@@ -1,0 +1,583 @@
+CRITICAL - 2023-03-06 06:21:48 --> Invalid file: "v_peta.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_peta.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_peta', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('v_peta')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:23:47 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;datalokasiobjeks&quot; does not exist
+LINE 1: INSERT INTO &quot;datalokasiobjeks&quot; (&quot;nama&quot;, &quot;deskripsi&quot;, &quot;latitu...
+                    ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(36): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:23:47 --> pg_query(): Query failed: ERROR:  relation &quot;datalokasiobjeks&quot; does not exist
+LINE 1: INSERT INTO &quot;datalokasiobjeks&quot; (&quot;nama&quot;, &quot;deskripsi&quot;, &quot;latitu...
+                    ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjeks" ("nama", "deskripsi", "latitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(36): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:25:43 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...&quot; (&quot;nama&quot;, &quot;deskripsi&quot;, &quot;latitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(36): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:25:43 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...&quot; (&quot;nama&quot;, &quot;deskripsi&quot;, &quot;latitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(36): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:29:03 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(36): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:29:03 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(36): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:29:27 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(36): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:29:27 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(36): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:30:01 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(36): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:30:01 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(36): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:32:03 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(36): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:32:03 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(36): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:32:16 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(36): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:32:16 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(36): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:32:51 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(37): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:32:51 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(37): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:35:30 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(37): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:35:30 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(37): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:36:49 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(36): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:36:49 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(36): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:37:50 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(36): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:37:50 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(36): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:41:06 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(37): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:41:06 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(37): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:42:20 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(37): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:42:20 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(37): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-06 07:46:20 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(37): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 07:46:20 --> pg_query(): Query failed: ERROR:  column &quot;updated_at&quot; of relation &quot;datalokasiobjek&quot; does not exist
+LINE 1: ...eskripsi&quot;, &quot;latitude&quot;, &quot;longitude&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(37): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-06 08:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 08:23:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 08:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 08:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-06 08:31:24 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type numeric: &quot;&quot;
+LINE 1: ... &quot;updated_at&quot;) VALUES ('Tugu Jogja', 'Tugu Joga', '', '', '2...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(38): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 08:31:24 --> pg_query(): Query failed: ERROR:  invalid input syntax for type numeric: &quot;&quot;
+LINE 1: ... &quot;updated_at&quot;) VALUES ('Tugu Jogja', 'Tugu Joga', '', '', '2...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(38): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-06 08:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 08:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 08:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 08:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 08:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 08:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-06 08:34:06 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type numeric: &quot;&quot;
+LINE 1: ..., &quot;created_at&quot;, &quot;updated_at&quot;) VALUES ('wfrf', '', '', '', '2...
+                                                             ^ in C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\XAMPPP\\htdoc...', 147)
+#1 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\Postgre\Connection.php(147): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\XAMPPP\htdocs\petalokasiobjek\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#7 C:\XAMPPP\htdocs\petalokasiobjek\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\XAMPPP\htdocs\petalokasiobjek\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#9 C:\XAMPPP\htdocs\petalokasiobjek\app\Controllers\Home.php(38): CodeIgniter\BaseModel->save(Array)
+#10 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+#11 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\XAMPPP\htdocs\petalokasiobjek\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\XAMPPP\htdocs\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-06 08:34:06 --> pg_query(): Query failed: ERROR:  invalid input syntax for type numeric: &quot;&quot;
+LINE 1: ..., &quot;created_at&quot;, &quot;updated_at&quot;) VALUES ('wfrf', '', '', '', '2...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datalokasiobjek" ("nama", "deskripsi", "latitude", "longitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :latitude:, :longitude:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(38): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-06 08:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-06 08:49:09 --> "reuired" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('reuired')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('nama', 'nama', 'ROOTPATH\\public', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Home.php(30): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-06 08:49:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-06 08:54:19 --> "reuired" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('reuired')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('nama', 'nama', 'ROOTPATH\\public', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Home.php(30): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->simpan_tambah_data()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-06 08:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 08:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 08:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 09:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 09:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 09:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 09:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 09:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 09:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 09:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 09:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 09:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 09:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-06 09:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
